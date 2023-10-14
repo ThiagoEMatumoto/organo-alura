@@ -5,17 +5,8 @@ import ListSelect from "../ListSelect/ListSelect";
 import Botao from "../Botao/Botao";
 import { useState } from "react";
 
-const Formulario = ({cadastroColaborador}) => {
-  const times = [
-    "",
-    "Programação",
-    "Front-End",
-    "Data Science",
-    "Devops",
-    "UX e Design",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
+const Formulario = ({cadastroColaborador, teams}) => {
+
 
   const aoSalvar = (event) => {
     event.preventDefault();
@@ -54,7 +45,7 @@ const Formulario = ({cadastroColaborador}) => {
         <ListSelect
           obrigatorio={true}
           label="Time"
-          itens={times}
+          itens={teams}
           valor={team}
           aoAlterado={(valor) => setTeam(valor)}
         />
