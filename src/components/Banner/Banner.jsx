@@ -3,7 +3,11 @@ import styles from "./Banner.module.css"
 
 function Banner() {
   return (
-    <img className={styles.banner} src={banner} alt="Banner" />
+    <div  className={styles.banner}>
+      <img src={banner} alt="Banner" />
+
+    </div>
+
   )
 }
 
