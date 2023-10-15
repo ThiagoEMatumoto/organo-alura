@@ -10,13 +10,13 @@ const Formulario = ({cadastroColaborador, teams}) => {
 
   const aoSalvar = (event) => {
     event.preventDefault();
-    cadastroColaborador({nome,cargo,imagem, team})
+    cadastroColaborador({nome,cargo,imagem, time})
   };
 
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
-  const [team, setTeam] = useState("");
+  const [time, setTime] = useState("");
 
   return (
     <div className={styles.formulario}>
@@ -46,8 +46,8 @@ const Formulario = ({cadastroColaborador, teams}) => {
           obrigatorio={true}
           label="Time"
           itens={teams}
-          valor={team}
-          aoAlterado={(valor) => setTeam(valor)}
+          valor={time}
+          aoAlterado={(valor) => setTime(valor)}
         />
         <Botao texto="Criar Card" />
       </form>
