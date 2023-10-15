@@ -11,6 +11,7 @@ const ListSelect = ({label, itens, obrigatorio, valor, aoAlterado}) => {
     <div className={styles.lista_suspensa}>
       <label>{label}</label>
       <select required={obrigatorio} value={valor} onChange={aoSelecionar}>
+        <option value=""></option>
         {
           itens.map(item => <option key={item}>{item}</option>)
         }
