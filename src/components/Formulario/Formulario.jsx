@@ -11,6 +11,10 @@ const Formulario = ({cadastroColaborador, teams}) => {
   const aoSalvar = (event) => {
     event.preventDefault();
     cadastroColaborador({nome,cargo,imagem, time})
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setTime('')
   };
 
   const [nome, setNome] = useState("");
